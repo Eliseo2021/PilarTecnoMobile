@@ -36,7 +36,7 @@ import { Avatar, Badge, Icon, withBadge } from 'react-native-elements';
 
 Estrucura de Desarrollo
 Carpetas para crear el proyecto.
-
+```bash
 src
 ├── api
 ├── assets            
@@ -58,3 +58,4 @@ src
         ├── Profile
         └── Map
 
+```
