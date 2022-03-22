@@ -61,7 +61,7 @@ const Profile = () => {
                     <Text style={styles.name}>Juan Carlos</Text>
                     <Text style={styles.info}>UX Designer / Mobile developer</Text>
                     <Text style={styles.description}>
-                        DESCRIPCION Lorem ipsum dolor sit amet, saepe sapientem eu nam.
+                        Email: juancarlos@gmail.com
                     </Text>
                     <TouchableOpacity style={styles.buttonContainer}>
                         <Text>Pilar Tecno </Text>
