@@ -1,13 +1,16 @@
+import 'react-native-gesture-handler';
 import React, { Component, useCallback } from 'react';
-import { 
-    View, 
-    Text
-} from 'react-native';
-import Home from '../screens/Home'
+import { NavigationContainer } from '@react-navigation/native';
+
+
+import AppStack from '../routs/app';
+
 
 export default App = () => {
 
-    return(
-        <Home />
+    return (
+        <NavigationContainer>
+            <AppStack />
+        </NavigationContainer>
     )
 }
