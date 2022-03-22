@@ -10,7 +10,9 @@ import {
     Alert,
     Image,
 } from 'react-native';
+
 import { styles } from './styles'
+import Header from '../../components/Header';
 
 //const IMG_FONDO = 'https://www.wallpaperkiss.com/wimg/b/221-2216607_big.jpg'
 //source={require('../../assets/images/bg-0.jpg')}
@@ -20,7 +22,7 @@ export default Home = ({navigation}) => {
     return(
         <SafeAreaView style={styles.container}>
 	<ImageBackground style={styles.mainContent} source={require('../../assets/images/bg-0.jpg')} >
-
+<Header />
 <View>
 		<Pressable
                         onPress={() => Alert.alert(
