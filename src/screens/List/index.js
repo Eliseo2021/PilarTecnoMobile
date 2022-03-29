@@ -1,19 +1,3 @@
-/* import React, { Component, useCallback } from "react";
-import { Button, SafeAreaView, View, Text, ImageBackground } from "react-native";
-
-import { styles } from "./styles";
-import Header from '../../components/Header';
-
-function List({ navigation }) {
-  return (
-    <View  style={styles.container}>
-<Header />
-      <Text  style={styles.mainContainer}>Lista screen</Text>
-    </View>
-  );
-}
-export default List; */
-
 import React, { useState, useEffect } from "react";
 import { View, FlatList, TouchableOpacity } from "react-native";
 import { ListItem, Avatar} from "react-native-elements";
@@ -44,7 +28,7 @@ function List(props) {
 
     return (
       <TouchableOpacity
-        onPress={() => props.navigation.navigate("", (item = { item }))}
+        onPress={() => props.navigation.navigate("ListItem", (item = { item }))}
         style={styles.containerTouchable}
       >
         <ListItem bottomDivider style={styles.containerBottomDivider}>

@@ -10,6 +10,7 @@ import {
 import { Header as HeaderRN, Icon } from 'react-native-elements';
 
 const Header = (props) => {
+const { leftIcon, leftAction, title } = props
 
     const createAlert = () => {
         Alert.alert(
@@ -26,10 +27,19 @@ const Header = (props) => {
                 barStyle="light-content"
                 containerStyle={styles.headerContainer}
                 backgroundColor="#397af8"
-                leftComponent={{
-                    icon: 'menu',
-                    color: '#fff',
-                }}
+                leftComponent={leftIcon ?
+                    (
+                        <TouchableOpacity
+                            style={{ marginLeft: 10 }}
+                            onPress={leftAction?() => leftAction():false}
+                        >
+                            <Icon type="material" name={leftIcon} color="white" size={50} />
+                        </TouchableOpacity>
+                    )
+                    :
+                    { icon: 'menu', color: '#fff', }
+                }
+
                 rightComponent={
                     <View style={styles.headerRight}>
                         <TouchableOpacity
@@ -39,7 +49,7 @@ const Header = (props) => {
                         </TouchableOpacity>
                     </View>
                 }
-                centerComponent={{ text: 'Pilar Tecno', style: styles.heading }}
+                centerComponent={{ text: title?title :'Pilar Tecno', style: styles.heading }}
             />
         </View>
     );

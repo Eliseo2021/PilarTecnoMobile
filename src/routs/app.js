@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 //import Home from "../screens/Home/index";
 import Tabs  from "./Tabs";
 import List from "../screens/List";
+import ListItem from '../screens/ListItem';
 import Mapa from "../screens/Map";
 import Profile from "../screens/Profile";
 import Login from '../screens/Auth/SignIn';
@@ -27,6 +28,7 @@ const user = useSelector(state=>state.user.user)
             }
 
       <Stack.Screen name="List" component={List} options={{ headerTitleAlign: 'center' }} />
+      <Stack.Screen name="ListItem" component={ListItem} options={{ headerTitleAlign: 'center' }} />
       <Stack.Screen name="Mapa" component={Mapa} options={{ headerTitleAlign: 'center' }} />
      <Stack.Screen name="Profile" component={Profile} options={{ headerTitleAlign: 'center' }} />       
     </Stack.Navigator>
