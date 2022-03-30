@@ -1,19 +1,33 @@
 # PilarTecnoMobile
 Pilar Tecno App 
 
-# Actividad 2:
+# Actividad 3:
 
-## PilarTecnoMobile
-Pilar Tecno App 
+### 1   -> *INSTALL DEPENDENCIAS.
 
-### 1   -> *Integrar redux como se indica en la guía.
+### 2   -> *interfax api rest.
+-> consultar https://pokeapi.co/api/v2/
 
-### 2   -> *Crear la botonera con 4 pestañas
-![Image 1](src/assets/screenshots/01.jpg)
+-> crear carpeta api -> index.js -> funsiones y variables
 
-### 3  -> *crear pantalla login con un formulario
-![Image 2](src/assets/screenshots/02.jpg)
+- const: BASE_URL, IMG_URL.
+- metodo: getPokemonList //get all pokemons
+- metodo: getPokemon //get pokemon by Id
 
-### 4 ->   *En la pantalla de perfil incluir datos de usuario
-![Image 3](src/assets/screenshots/03.jpg)
+### 3  -> *listado de recursos mediante get.
+-> componentes de react-native:- FlatList // recorrer listar
+-> componentes de react-native-elements:-  ListItem  // listar elemetos
 
+![Image 2](src/assets/screenshots/05.jpg)
+
+### 4 ->   *show item pasar props entre componentes.
+-> componentes de react-native:- ScrollView //expandir lista
+-> navegation: <Header leftIcon='arrow-back' title={pokemon?.name} leftAction={() => props.navigation.goBack()} />
+->collapsible //Componente para listas
+
+![Image 3](src/assets/screenshots/06.jpg)
+
+
+### 5 -> **Metodo RefreshContol, metodo getMores, componente ActivityIndicator.'
+
+/*---------------TASK FINISH.js---------------------*/

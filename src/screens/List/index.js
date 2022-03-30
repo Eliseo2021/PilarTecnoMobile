@@ -27,7 +27,6 @@ function List(props) {
     getPokemonList().then((data) => {
       setPokemons(data.results);
       setNext(data.next);
-
     });
   }, []);
 
