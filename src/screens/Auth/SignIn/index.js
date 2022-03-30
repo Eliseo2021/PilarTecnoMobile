@@ -19,8 +19,7 @@ export default Login = () => {
     const [email, setEmail] = useState('')
     const [pw, setPw] = useState('')
 
-    //setear el user en el store - > useDispatch ->1- import { useDispatch } 2- definir const dispatch 3-dispatch(actions.user.setUser(true))
-    const dispatch = useDispatch() //ejecutar los actions, hay que importarlos 
+    const dispatch = useDispatch() 
 
     const onChangeEmail = (value) => {
         setEmail(value)
@@ -34,16 +33,16 @@ export default Login = () => {
         try {
             await AsyncStorage.setItem('user', JSON.stringify(true)) //JSON.stringfy ->solo se almacenan string
         } catch (e) {
-            // saving error
+            
         }
         dispatch(actions.user.setUser(true))
     }
     return (
         <SafeAreaView style={styles.container}>
-            <View style={{ flexDirection: 'column', width }}>
-                <View style={{ marginVertical: '10%' }}>
+            <View style={styles.containerCard1}>
+                <View style={styles.containerCard2}>
                     <Text style={styles.title}>
-                        Ingresa a Pilar Tecno
+                        Ingresa a Pilar Tecno App
                     </Text>
                 </View>
                 <Input
@@ -59,7 +58,7 @@ export default Login = () => {
                     onChangeText={value => onChangePW(value)}
                 />
 
-                <View style={{ alignItems: 'center' }}>
+                <View style={styles.containerCard3}>
                     <Button style={styles.buttonSinIn}
                         title="Ingresar"
                         onPress={() => _sigIn()}

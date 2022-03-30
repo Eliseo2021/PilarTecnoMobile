@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { View, FlatList, TouchableOpacity } from "react-native";
-import { ListItem, Avatar} from "react-native-elements";
+import React, { useState, useEffect, useCallback } from "react";
+import { View, FlatList, TouchableOpacity, RefreshControl } from "react-native";
+import { ActivityIndicator, Button, ListItem, Avatar } from "react-native-elements";
 
 import { styles } from "./styles";
 
@@ -8,21 +8,41 @@ import Header from "../../components/Header";
 import { getPokemonList, IMG_URL } from "../../api";
 import { getPokemonImgId } from "../../utils";
 
+const wait = (timeout) => {
+  return new Promise(resolve => setTimeout(resolve, timeout));
+}
+
 function List(props) {
   const [pokemons, setPokemons] = useState();
   const [next, setNext] = useState();
+  const [refreshing, setRefreshing] = useState(false);
+  const [loadingMore, setLoadingMore] = useState(false);
+
+  const onRefresh = useCallback(() => {
+    setRefreshing(true);
+    wait(2000).then(() => setRefreshing(false));
+  }, []);
 
   useEffect(() => {
     getPokemonList().then((data) => {
-      //console.log('data :' + JSON.stringify(data))
       setPokemons(data.results);
-      console.log(setPokemons);
       setNext(data.next);
+
     });
   }, []);
 
+
+  const loadMore = () => {
+    setLoadingMore(true);
+    getPokemonList(next).then((data) => {
+      setPokemons([...pokemons, ...data.results]);
+      setNext(data.next);
+      setLoadingMore(false);
+    });
+  }
+
+
   const renderItem = (item) => {
-    //console.log('data :' + JSON.stringify(item))
     const path = item.url.split("/");
     const imgID = getPokemonImgId(path[6]);
 
@@ -51,6 +71,18 @@ function List(props) {
           renderItem={(item, index) => renderItem(item.item, index)}
           keyExtractor={(item, index) => index}
           style={styles.containerFlatList}
+          refreshControl={
+            <RefreshControl
+              refreshing={refreshing}
+              onRefresh={onRefresh}
+            />
+          }
+          ListFooterComponent={
+            loadingMore ?
+              (< ActivityIndicator />)
+              :
+              (<Button title='Cargar mas' onPress={() => loadMore()} />)
+          }
         />
       </View>
     </View>
@@ -58,3 +90,4 @@ function List(props) {
 }
 
 export default List;
+

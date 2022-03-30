@@ -27,4 +27,7 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
     backgroundColor: 'skyblue',
   },
+  containerCard1: { flexDirection: 'column', width },
+  containerCard2: { marginVertical: '10%' },
+  containerCard3: { alignItems: 'center' },
 })

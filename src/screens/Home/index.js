@@ -1,5 +1,4 @@
 import React, { Component, useCallback } from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import { Icon } from 'react-native-elements';
 import {
     SafeAreaView,
