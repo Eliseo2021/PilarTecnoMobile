@@ -1,33 +1,27 @@
 # PilarTecnoMobile
 Pilar Tecno App 
 
-# Actividad 3:
+# Actividad 4:
 
 ### 1   -> *INSTALL DEPENDENCIAS.
 
-### 2   -> *interfax api rest.
--> consultar https://pokeapi.co/api/v2/
+-> npm install react-native-maps --save-exact
+-> npm install react-native-geolocation-service
 
--> crear carpeta api -> index.js -> funsiones y variables
+### 2   -> * Implementar pantalla Mapa.
+![Image 3](src/assets/screenshots/mapa1.jpg)
 
-- const: BASE_URL, IMG_URL.
-- metodo: getPokemonList //get all pokemons
-- metodo: getPokemon //get pokemon by Id
+### 3  -> * Renderizar en el mapa implementando un pickaper de ubicacion.'.
 
-### 3  -> *listado de recursos mediante get.
--> componentes de react-native:- FlatList // recorrer listar
--> componentes de react-native-elements:-  ListItem  // listar elemetos
+![Image 3](src/assets/screenshots/mapa2.jpg)
 
-![Image 2](src/assets/screenshots/05.jpg)
+### 4 ->  * 2-boton para cambiar el tipo de mapa + 1-boton guardar ubicacion.'
+![Image 3](src/assets/screenshots/mapa4.jpg)
 
-### 4 ->   *show item pasar props entre componentes.
--> componentes de react-native:- ScrollView //expandir lista
--> navegation: <Header leftIcon='arrow-back' title={pokemon?.name} leftAction={() => props.navigation.goBack()} />
-->collapsible //Componente para listas
+![Image 3](src/assets/screenshots/mapa4b.jpg)
 
-![Image 3](src/assets/screenshots/06.jpg)
+### 5 ->  * solicitud de permisos de geolocalizacion'.
+![Image 3](src/assets/screenshots/permiso.jpg)
 
-
-### 5 -> **Metodo RefreshContol, metodo getMores, componente ActivityIndicator.'
 
 /*---------------TASK FINISH.js---------------------*/
