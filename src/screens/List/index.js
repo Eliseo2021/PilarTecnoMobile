@@ -12,7 +12,7 @@ const wait = (timeout) => {
   return new Promise(resolve => setTimeout(resolve, timeout));
 }
 
-function List(props) {
+function List({navigation}) {
   const [pokemons, setPokemons] = useState();
   const [next, setNext] = useState();
   const [refreshing, setRefreshing] = useState(false);
@@ -47,7 +47,7 @@ function List(props) {
 
     return (
       <TouchableOpacity
-        onPress={() => props.navigation.navigate("ListItem", (item = { item }))}
+        onPress={() => navigation.navigate("ListItem", (item = { item }))}
         style={styles.containerTouchable}
       >
         <ListItem bottomDivider style={styles.containerBottomDivider}>

@@ -28,7 +28,7 @@ const Tabs = () => {
                 }}
             />
 
-            <Tab.Screen name="Lista" component={List}
+            <Tab.Screen name="List" component={List}
                 options={{
                     tabBarIcon: ({ color }) => (
                         <Icon name={'marker'} type="font-awesome-5" size={20} color={color} />

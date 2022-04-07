@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "351728171332",
+    "project_id": "pilartecno2022-lr",
+    "storage_bucket": "pilartecno2022-lr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351728171332:android:bc0f960fcd846ac543ff11",
+        "android_client_info": {
+          "package_name": "com.pilartecnomobile2022"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "351728171332-pkqahdlrutr53sfq784hk9cj12380gti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_4YHwJ7j_vLz3f4Qt7ric0LMUtvFOALM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "351728171332-pkqahdlrutr53sfq784hk9cj12380gti.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -35,5 +35,6 @@ export const styles = StyleSheet.create({
   },
   containerFlatList: {
     marginTop: height / 10,
+    width: width -20,
   },
 });
