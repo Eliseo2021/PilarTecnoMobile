@@ -5,7 +5,6 @@ import MapView, { Maker } from 'react-native-maps';
 import { styles } from "./styles";
 import Header from '../../components/Header';
 
-
 const width = Dimensions.get("window").width;
 const height = Dimensions.get("window").height;
 

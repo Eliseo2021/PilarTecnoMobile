@@ -14,7 +14,6 @@ import { useDispatch } from 'react-redux';
 import Header from '../../components/Header';
 import { styles } from './styles';
 
-
 const Profile = () => {
 
     const dispatch = useDispatch()
