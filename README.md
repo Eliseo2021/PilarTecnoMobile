@@ -1,33 +1,21 @@
 # PilarTecnoMobile
 Pilar Tecno App 
 
-# Actividad 3:
+# practica con FIREBASE:
 
 ### 1   -> *INSTALL DEPENDENCIAS.
+### 2   -> * Autenticación  Proceso de ingreso a la app '
 
-### 2   -> *interfax api rest.
--> consultar https://pokeapi.co/api/v2/
-
--> crear carpeta api -> index.js -> funsiones y variables
-
-- const: BASE_URL, IMG_URL.
-- metodo: getPokemonList //get all pokemons
-- metodo: getPokemon //get pokemon by Id
-
-### 3  -> *listado de recursos mediante get.
--> componentes de react-native:- FlatList // recorrer listar
--> componentes de react-native-elements:-  ListItem  // listar elemetos
-
-![Image 2](src/assets/screenshots/05.jpg)
-
-### 4 ->   *show item pasar props entre componentes.
--> componentes de react-native:- ScrollView //expandir lista
--> navegation: <Header leftIcon='arrow-back' title={pokemon?.name} leftAction={() => props.navigation.goBack()} />
-->collapsible //Componente para listas
-
-![Image 3](src/assets/screenshots/06.jpg)
+### 3   -> git commit -m '3-> * Autenticación escucha activa de sesión '
+### 4   ->  *** FALTA: Autenticación  Proceso de salida de la app (NO LLEGUE CON EL TIEMPO) *** '
 
 
-### 5 -> **Metodo RefreshContol, metodo getMores, componente ActivityIndicator.'
+![Image 2](src/assets/screenshots/a0.jpg)
+
+![Image 2](src/assets/screenshots/a1.jpg)
+
+![Image 2](src/assets/screenshots/a3.jpg)
+
+![Image 2](src/assets/screenshots/a4.jpg)
 
 /*---------------TASK FINISH.js---------------------*/
